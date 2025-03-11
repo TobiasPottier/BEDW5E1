@@ -1,0 +1,17 @@
+@url=http://localhost:5000
+
+
+GET {{url}}/api/sneakers/brands
+
+###
+
+POST {{url}}/api/sneakers
+Content-Type: application/json
+
+{
+    "Name": "BiasShoe",
+    "Price": 199.00,
+    "Stock": 50,
+    "BrandId": "67d037955d5196ba78a11b1d",
+    "OccasionIds": ["67d037955d5196ba78a11b22"]
+}
