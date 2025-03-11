@@ -1,0 +1,23 @@
+@url=http://localhost:5002
+
+
+GET {{url}}/api/sneakers/67d04990521e914e3d1a0e33
+XApiKey: HelloBias
+
+###
+
+POST {{url}}/api/sneakers
+Content-Type: application/json
+
+{
+    "Name": "BiasShoe",
+    "Price": 199.00,
+    "Stock": 50,
+    "BrandId": "67d037955d5196ba78a11b1d",
+    "OccasionIds": ["67d037955d5196ba78a11b22"]
+}
+
+###
+
+GET {{url}}/api/sneakers/apply-discount/100
+XApiKey: HelloBias
