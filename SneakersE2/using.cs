@@ -12,6 +12,8 @@ global using Sneakers.API.Controllers;
 
 global using Sneakers.API.DTOs;
 
+global using Sneakers.API.Middleware;
+
 global using MongoDB.Driver;
 
 global using MongoDB.Bson;

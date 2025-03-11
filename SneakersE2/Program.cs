@@ -8,11 +8,16 @@ builder.Services.AddSingleton<IMongoContext, MongoContext>();
 builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 builder.Services.AddScoped<IOccasionRepository, OccasionRepository>();
 builder.Services.AddScoped<ISneakerRepository, SneakerRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IDataService, DataService>();
 builder.Services.AddScoped<SneakerValidator, SneakerValidator>();
 builder.Services.AddControllers();
+builder.Services.Configure<ApiKeySettings>(builder.Configuration.GetSection("ApiKeySettings"));
 
 var app = builder.Build();
+
+app.UseMiddleware<ApiKeyMiddleware>();
+
 
 app.MapGet("/", () => "|App is running|");
 

@@ -10,12 +10,14 @@ public class DataService : IDataService
     private readonly IBrandRepository _brandRepository;
     private readonly IOccasionRepository _occasionRepository;
     private readonly ISneakerRepository _sneakerRepository;
+    private readonly IUserRepository _userRepository;
 
-    public DataService(IBrandRepository brandRepository, IOccasionRepository occasionRepository, ISneakerRepository sneakerRepository)
+    public DataService(IBrandRepository brandRepository, IOccasionRepository occasionRepository, ISneakerRepository sneakerRepository, IUserRepository userRepository)
     {
         _brandRepository = brandRepository;
         _occasionRepository = occasionRepository;
         _sneakerRepository = sneakerRepository;
+        _userRepository = userRepository;
     }
 
     public async Task SetupData()
@@ -111,6 +113,19 @@ public class DataService : IDataService
                     Occasions = new List<Occasion>() { occasions[0], occasions[1] }
                 });
             }
+
+            // Add User if none exist
+            if (!(await _userRepository.GetUsers()).Any())
+            {
+                User newUser = new User()
+                {
+                    CustomerNr = 123,
+                    Discount = 10,
+                    ApiKey = "HelloBias"
+                };
+                await _userRepository.AddUsers(new List<User> { newUser });
+            }
+
         }
         catch (Exception ex)
         {

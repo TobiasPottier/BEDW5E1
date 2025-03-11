@@ -90,4 +90,22 @@ public class SneakersController : ControllerBase
             return NotFound();
         return Ok(sneaker);
     }
+
+    // GET: api/sneakers/apply-discount
+    [HttpGet("apply-discount/{originalPrice}")]
+    public IActionResult GetDiscountedPrice(decimal originalPrice)
+    {
+        // Retrieve the user from the context. Ensure you cast it to your User type.
+        var user = HttpContext.Items["User"] as User;
+        if (user == null)
+        {
+            return Unauthorized("User not found.");
+        }
+
+        // Assume Discount is stored as a percentage (e.g., 10 for 10% off)
+        var discount = user.Discount;
+        var discountedPrice = originalPrice - (originalPrice * discount / 100);
+
+        return Ok(new { originalPrice, discountedPrice });
+    }
 }
