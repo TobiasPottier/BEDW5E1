@@ -21,3 +21,39 @@ Content-Type: application/json
 
 GET {{url}}/api/sneakers/apply-discount/100
 XApiKey: HelloBias
+
+
+###
+
+POST {{url}}/register
+Content-Type: application/json
+
+{
+  "username": "tonyt",
+  "password": "SuperSecret1!",
+  "email": "tony@test.com",
+  "company": "Howest"
+}
+
+###
+
+POST {{url}}/login
+Content-Type: application/json
+
+{
+  "email": "tony@test.com",
+  "password": "SuperSecret1!"
+}
+
+###
+@tokenAdmin=CfDJ8GPpz5u8eV9Os0FZYmZ2HH49v-kxVEEGoZDB09rRkJfdLM4TWarcFzrpFk_eNemWkIVFNckiQDGp8JxpyTee_civ0P4BlhK1eoyCzButPetAtrkzg9KvjHDcUDxlaBxs8P_IsnXhn8fTUWLMsIv3dfUHh2jxBU5JtXkmbqbXd2J2nNUOfvcj7lYBdft2njqS_1lb0nSql4RCG0dMQRxwLCPwWY0-aMZEK-wp6KYgIb6GvbXd7PVxDZTb4wNyllySABSLeLjHUkMuh7a2nsmLbI44sVgGDhLc-lcWXUpXkkm5mSHGxg2ErKKBExJkC77dfHTNEe93qpN7Qbt8XnlnlT4CpzsFSZGE7QVPbLLSm_kzrXeMpU2xRGj8vZHRyixe1_MRlEoe91Pd5E8S5MtegF7TFzhsxHaa6JOR7Zq9rFfYuKIren7dlAc2GDDvYk9UrShgmnJV7yRqUBRCKj3akFN4kqm-9Eafj-_fjWviLG2_YaKaN8mX7O9oxu5CFCexIr-kr4tzHVO2oBTpmYZ6FIG0o3qkH0OyfMwRpDZIyYFBa75laWS9DBW0NDT-aMZQ0jip9XzvlMGsa3OB29-CoBpe0DepubuFzLN7VUf9r7QVWVHY3lmMz41fNUxUrDkAMYgrEq-ZeFA928b96EbEjvKp7iKbNrJ9EP7SuqG43Iyz96IpKyuolNr3TRa9nGOaAw
+
+###
+GET {{url}}/user
+Authorization: Bearer {{tokenAdmin}}
+
+
+###
+
+GET {{url}}/api/sneakers/67d04990521e914e3d1a0e33
+Authorization: Bearer {{tokenAdmin}}

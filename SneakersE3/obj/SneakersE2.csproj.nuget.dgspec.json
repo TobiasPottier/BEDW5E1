@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE3/SneakersE2.csproj": {}
+    "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE2/SneakersE2.csproj": {}
   },
   "projects": {
-    "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE3/SneakersE2.csproj": {
+    "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE2/SneakersE2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE3/SneakersE2.csproj",
+        "projectUniqueName": "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE2/SneakersE2.csproj",
         "projectName": "SneakersE2",
-        "projectPath": "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE3/SneakersE2.csproj",
+        "projectPath": "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE2/SneakersE2.csproj",
         "packagesPath": "/Users/tobiaspottier/.nuget/packages/",
-        "outputPath": "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE3/obj/",
+        "outputPath": "/Users/tobiaspottier/Main/Schoo/1BackendDev/Week05/Lab/BEDW5E1/SneakersE2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tobiaspottier/.nuget/NuGet/NuGet.Config"

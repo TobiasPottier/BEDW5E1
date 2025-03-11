@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Sneakers.API.Validitors;
 
 namespace Sneakers.API.Controllers;
@@ -83,6 +84,7 @@ public class SneakersController : ControllerBase
 
     // GET: api/sneakers/{id}
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<IActionResult> GetSneaker(string id)
     {
         var sneaker = await _sneakerRepository.GetSneaker(id);
